@@ -1,48 +1,75 @@
 import React, { Component } from 'react';
-//import 'uikit/dist/css/uikit.min.css';
-import Signup from './Signup';
 import Markdown from './Markdown';
-//import './App.css';
+import './App.css';
 
 class App extends Component {
-  state = { devices: [], loading: true, error: false, diff: false, first: true, subscribe: [] };
-
   render() {
     return (
-      <div className="App">
-        <div uk-sticky>
-          Anyád
+      <div>
+        <div data-uk-sticky className="uk-navbar-container tm-navbar-container" >
+            hali
         </div>
 
-        <div className="uk-container uk-backgorund">
-          <ul data-uk-accordion>
-            <li>
-              <h3 className="uk-accordion-title">DevTeam</h3>
-              <div className="uk-accordion-content">
-                <Markdown path={'/markdown/DevTeam.md'} />
+        <div className="body">
+          <div className="uk-section uk-section-primary uk-light">
+            <div className="uk-container">
+              <h3>A KSZK-ról</h3>
+              <div>
+                <Markdown path={'/markdown/bemutatkozas.md'} />
               </div>
+            </div>
+          </div>
 
-              <h3 className="uk-accordion-title">Hallgatói Tudásbázis</h3>
-              <div className="uk-accordion-content">
-                <Markdown path={'/markdown/DevTeam.md'} />
+          <div className="uk-section uk-section-secondary uk-light">
+            <div className="uk-container">
+              <h3>Lehetőségek</h3>
+              <div>
+                <Markdown path={'/markdown/lehetosegek.md'} />
               </div>
+            </div>
+          </div>
 
-              <h3 className="uk-accordion-title">NETeam</h3>
-              <div className="uk-accordion-content">
-                <Markdown path={'/markdown/DevTeam.md'} />
+          <div className="uk-section uk-section-muted">
+            <div className="uk-container">
+              <h3>Köreink</h3>
+              <div>
+                <ul data-uk-accordion>
+                  <li>
+                    <h3 className="uk-accordion-title">DevTeam</h3>
+                    <div className="uk-accordion-content">
+                      <Markdown path={'/markdown/DevTeam.md'} />
+                    </div>
+                  </li>
+                  <li>
+                    <h3 className="uk-accordion-title">Hallgatói Tudásbázis</h3>
+                    <div className="uk-accordion-content">
+                      <Markdown path={'/markdown/HAT.md'} />
+                    </div>
+                  </li>
+                  <li>
+                    <h3 className="uk-accordion-title">NETeam</h3>
+                    <div className="uk-accordion-content">
+                      <Markdown path={'/markdown/NETeam.md'} />
+                    </div>
+                  </li>
+                  <li>
+                    <h3 className="uk-accordion-title">SecurITeam</h3>
+                    <div className="uk-accordion-content">
+                      <Markdown path={'/markdown/SecurITeam.md'} />
+                    </div>
+                  </li>
+                  <li>
+                    <h3 className="uk-accordion-title">Sysadmin</h3>
+                    <div className="uk-accordion-content">
+                      <Markdown path={'/markdown/Sysadmin.md'} />
+                    </div>
+                  </li>
+                </ul>
               </div>
+            </div>
+          </div>
 
-              <h3 className="uk-accordion-title">SecurITeam</h3>
-              <div className="uk-accordion-content">
-                <Markdown path={'/markdown/DevTeam.md'} />
-              </div>
 
-              <h3 className="uk-accordion-title">Sysadmin</h3>
-              <div className="uk-accordion-content">
-                <Markdown path={'/markdown/DevTeam.md'} />
-              </div>
-            </li>
-          </ul>
         </div>
 
       </div>

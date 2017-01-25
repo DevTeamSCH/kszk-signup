@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Remarkable from 'remarkable';
 import axios from 'axios';
 
-
 class Markdown extends Component {
-
   state = { markdown: '' };
 
   componentWillMount() {
@@ -14,7 +12,7 @@ class Markdown extends Component {
   }
 
   getRawMarkup() {
-    const md = new Remarkable();
+    const md = new Remarkable('full');
     console.log(this.state.markdown);
     return { __html: md.render(this.state.markdown) };
   }
