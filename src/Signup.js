@@ -21,11 +21,12 @@ class Signup extends Component {
 
   uploadData() {
     const { name, mail, interest, date, text } = this.state;
-    firebase.database().ref('/rookies')
+    /*firebase.database().ref('/rookies')
       .push({ name, mail, interest, date, text })
       .then(() => {
         this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
-      });
+      });*/
+    this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
   }
 
   next() {

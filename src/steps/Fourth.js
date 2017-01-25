@@ -9,7 +9,7 @@ class Fourth extends Component {
         </button>
         I am Fourth
         <button onClick={this.props.upload.bind(this)}>
-          upload
+          reset
         </button>
       </div>
     );
