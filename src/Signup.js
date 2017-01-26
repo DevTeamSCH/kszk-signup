@@ -6,7 +6,7 @@ import { First, Second, Third, Fourth } from './steps';
 //this.props.addToData({ interest: ['egy', 'ketto'] });
 
 class Signup extends Component {
-  state = { step: 1, name: '', mail: '', interest: [], date: false, text: '' };
+  state = { step: 0, name: '', mail: '', interest: [], date: true, text: '' };
   componentWillMount() {
       const config = {
         apiKey: 'AIzaSyBcO61362fgzXHuK2Fji5-Vs7H-n-6yyAI',
@@ -26,7 +26,7 @@ class Signup extends Component {
       .then(() => {
         this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
       });*/
-    this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
+    this.setState({ step: 0, name: '', mail: '', interest: [], date: false, text: '' });
   }
 
   next() {
@@ -44,9 +44,9 @@ class Signup extends Component {
     this.setState(state);
   }
 
-  render() {
+  getState() {
     switch (this.state.step) {
-      case 1:
+      case 0:
         return (
           <First
             next={this.next.bind(this)}
@@ -54,7 +54,7 @@ class Signup extends Component {
             data={this.state}
           />
         );
-      case 2:
+      case 1:
         return (
           <Second
             next={this.next.bind(this)}
@@ -63,7 +63,7 @@ class Signup extends Component {
             addToData={this.addData.bind(this)}
           />
         );
-      case 3:
+      case 2:
         return (
           <Third
             next={this.next.bind(this)}
@@ -72,7 +72,7 @@ class Signup extends Component {
             addToData={this.addData.bind(this)}
           />
         );
-      case 4:
+      case 3:
         return (
           <Fourth
             upload={this.uploadData.bind(this)}
@@ -84,6 +84,21 @@ class Signup extends Component {
         return;
     }
   }
+
+    render() {
+      return (
+        <div className="uk-card uk-card-default">
+          <div className="uk-card-header">
+            <div className="uk-flex-middle">
+              <div className="uk-width-auto">
+                <progress className="uk-progress" value={(this.state.step + 1) * 20} max="80" />
+              </div>
+            </div>
+          </div>
+          {this.getState()}
+        </div>
+      );
+    }
 }
 
 export default Signup;

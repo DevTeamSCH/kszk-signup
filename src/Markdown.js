@@ -13,7 +13,6 @@ class Markdown extends Component {
 
   getRawMarkup() {
     const md = new Remarkable('full');
-    console.log(this.state.markdown);
     return { __html: md.render(this.state.markdown) };
   }
 
