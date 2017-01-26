@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div data-uk-sticky className="uk-navbar-container tm-navbar-container" >
+        <div data-uk-sticky className="uk-navbar-container tm-navbar-container" id="navbar">
             hali <a className="uk-button uk-button-primary" href="#projektjeink" data-uk-scroll>Projektjeink</a>
         </div>
 

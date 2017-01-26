@@ -20,7 +20,6 @@ class First extends Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div>
         <div className="uk-card-body">
