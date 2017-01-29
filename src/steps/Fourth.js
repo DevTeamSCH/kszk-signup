@@ -2,11 +2,50 @@ import React, { Component } from 'react';
 
 class Fourth extends Component {
   upload() {
+    const interest = this.renderTeams();
+    this.props.addToData(interest);
     this.props.upload();
   }
 
+  renderTeams() {
+    const { devteam, hat, neteam, securiteam, sysadmin } = this.props.data;
+    const interest = [];
+    [devteam, hat, neteam, securiteam, sysadmin].forEach((val, index) => {
+      switch (index) {
+        case 0:
+          if (val) {
+            interest.push('DevTeam');
+          }
+          break;
+        case 1:
+          if (val) {
+            interest.push('Hallgatói Tudásbázis');
+          }
+          break;
+        case 2:
+          if (val) {
+            interest.push('NeTeam');
+          }
+          break;
+        case 3:
+          if (val) {
+            interest.push('SecurITeam');
+          }
+          break;
+        case 4:
+          if (val) {
+            interest.push('Sysadmin');
+          }
+          break;
+        default:
+          break;
+      }
+    });
+    return interest;
+  }
+
   render() {
-    const { name, mail, interest, date, text } = this.props.data;
+    const { name, mail, date, text } = this.props.data;
     return (
       <div>
         <div className="uk-card-body">
@@ -27,13 +66,18 @@ class Fourth extends Component {
               Érdekelt körök
             </dt>
             <dd>
-              {interest}
+              <ul className="uk-list">
+                { this.renderTeams().map((interest, index) => {
+                    return (<li className="uk-margin-remove" key={index}>{interest}</li>);
+                  })
+                }
+              </ul>
             </dd>
             <dt>
               Időpont
             </dt>
             <dd>
-              Az időpont: {date ? 'megfelel' : 'nem felel meg'}
+              {date ? 'Megfelel' : 'Nem felel meg'}
             </dd>
             <dt>
               Üzenet

@@ -28,8 +28,8 @@ class Second extends Component {
       default:
         break;
     }
-    this.props.addToData({ interest: this.state });
     this.setState({ devteam, hat, neteam, securiteam, sysadmin });
+    this.props.addToData({ devteam, hat, neteam, securiteam, sysadmin });
   }
 
   render() {

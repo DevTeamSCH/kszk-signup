@@ -6,7 +6,7 @@ import { First, Second, Third, Fourth } from './steps';
 //this.props.addToData({ interest: ['egy', 'ketto'] });
 
 class Signup extends Component {
-  state = { step: 0, name: '', mail: '', interest: [], date: true, text: '' };
+  state = { step: 0, name: '', mail: '', date: true, text: '' };
   componentWillMount() {
       const config = {
         apiKey: 'AIzaSyBcO61362fgzXHuK2Fji5-Vs7H-n-6yyAI',
@@ -17,31 +17,6 @@ class Signup extends Component {
       };
 
       firebase.initializeApp(config);
-  }
-
-  uploadData() {
-    const { name, mail, interest, date, text } = this.state;
-    /*firebase.database().ref('/rookies')
-      .push({ name, mail, interest, date, text })
-      .then(() => {
-        this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
-      });*/
-    this.setState({ step: 0, name: '', mail: '', interest: [], date: false, text: '' });
-  }
-
-  next() {
-    const nextState = this.state.step + 1;
-    this.setState({ step: nextState });
-  }
-
-  prev() {
-    const prevState = this.state.step - 1;
-    this.setState({ step: prevState });
-  }
-
-  addData(data) {
-    const state = { ...this.state, ...data };
-    this.setState(state);
   }
 
   getState() {
@@ -85,20 +60,47 @@ class Signup extends Component {
     }
   }
 
-    render() {
-      return (
-        <div className="uk-card uk-card-default">
-          <div className="uk-card-header">
-            <div className="uk-flex-middle">
-              <div className="uk-width-auto">
-                <progress className="uk-progress" value={(this.state.step + 1) * 20} max="80" />
-              </div>
+  next() {
+    const nextState = this.state.step + 1;
+    this.setState({ step: nextState });
+  }
+
+  prev() {
+    const prevState = this.state.step - 1;
+    this.setState({ step: prevState });
+  }
+
+  addData(data) {
+    const state = { ...this.state, ...data };
+    this.setState(state);
+  }
+
+
+  uploadData() {
+    const { name, mail, interest, date, text } = this.state;
+    /*firebase.database().ref('/rookies')
+      .push({ name, mail, interest, date, text })
+      .then(() => {
+        this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
+      });*/
+    console.log(name, mail, interest, date, text);
+    this.setState({ step: 0, name: '', mail: '', interest: [], date: false, text: '' });
+  }
+
+  render() {
+    return (
+      <div className="uk-card uk-card-default">
+        <div className="uk-card-header">
+          <div className="uk-flex-middle">
+            <div className="uk-width-auto">
+              <progress className="uk-progress" value={(this.state.step + 1) * 20} max="80" />
             </div>
           </div>
-          {this.getState()}
         </div>
-      );
-    }
+        {this.getState()}
+      </div>
+    );
+  }
 }
 
 export default Signup;
