@@ -16,7 +16,7 @@ class App extends Component {
                   <object data="kszk.svg" type="image/svg+xml" width="30px">
                     <img src="kszk.png" width="30px" alt="logo" />
                   </object>
-                  &nbsp;KSZK
+                  &nbsp;KSZKépzés 2017
                 </a>
               </div>
             </nav>
