@@ -14,5 +14,5 @@ npm run compile
 - [firebase](https://kszk-signup.firebaseapp.com)
 
 ### Release:
-- [kszk](http://ujonc.kszk.bme.hu)
-- [sch](http://kszkujonc.sch.bme.hu)
+- [ujonc.kszk.bme.hu](http://ujonc.kszk.bme.hu)
+- [kszkujonc.sch.bme.hu](http://kszkujonc.sch.bme.hu)
