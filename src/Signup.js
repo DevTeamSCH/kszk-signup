@@ -84,7 +84,41 @@ class Signup extends Component {
   }
 
   uploadData() {
-    const { name, mail, interest, date, text } = this.state;
+    const { name, mail, date, text } = this.state;
+
+    const interest = [];
+    const { devteam, hat, neteam, securiteam, sysadmin } = this.state;
+    [devteam, hat, neteam, securiteam, sysadmin].forEach((val, index) => {
+      switch (index) {
+        case 0:
+          if (val) {
+            interest.push('DevTeam');
+          }
+          break;
+        case 1:
+          if (val) {
+            interest.push('Hallgatói Tudásbázis');
+          }
+          break;
+        case 2:
+          if (val) {
+            interest.push('NeTeam');
+          }
+          break;
+        case 3:
+          if (val) {
+            interest.push('SecurITeam');
+          }
+          break;
+        case 4:
+          if (val) {
+            interest.push('Sysadmin');
+          }
+          break;
+        default:
+          break;
+      }
+    });
     firebase.database().ref('/rookies')
       .push({ name, mail, interest, date, text })
       .then(() => {
