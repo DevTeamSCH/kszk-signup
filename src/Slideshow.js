@@ -9,6 +9,7 @@ class Slideshow extends Component {
       arrows: false,
       autoplay: true,
       autoplaySpeed: 5000,
+      speed: 7000,
       pauseOnHover: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -24,7 +25,7 @@ class Slideshow extends Component {
             return (
                 <img
                   key={i}
-                  src={`markdown/images/${i}.JPG`}
+                  src={`markdown/images/${i}.jpg`}
                   role="presentation"
                   className="uk-margin-remove"
                 />
