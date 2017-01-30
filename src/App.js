@@ -121,7 +121,7 @@ class App extends Component {
               <h3>Projektjeink</h3>
               <div>
                 <Markdown path={'/markdown/projektjeink.md'} />
-                  <Slideshow start={1} stop={8} />
+                  <Slideshow start={1} stop={7} />
               </div>
             </div>
           </div>

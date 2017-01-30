@@ -13,8 +13,7 @@ class Slideshow extends Component {
       pauseOnHover: false,
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      adaptiveHeight: true
+      infinite: true
     };
     // adaptiveHeight not needed if there is no image with wrong ratio
     const { start, stop } = this.props;
