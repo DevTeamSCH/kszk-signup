@@ -11,11 +11,12 @@ class Slideshow extends Component {
       autoplaySpeed: 5000,
       speed: 7000,
       pauseOnHover: false,
-      slidesToShow: 1,
+      slidesToShow: 2,
       slidesToScroll: 1,
       infinite: true,
       adaptiveHeight: true
     };
+    // adaptiveHeight not needed if there is no image with wrong ratio
     const { start, stop } = this.props;
 
     return (
