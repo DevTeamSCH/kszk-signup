@@ -8,7 +8,7 @@ class Slideshow extends Component {
     const settings = {
       arrows: false,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       pauseOnHover: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -21,9 +21,9 @@ class Slideshow extends Component {
       <Slider {...settings}>
         {
           _.range(start, stop + 1).map(i => {
-            console.log(i);
             return (
                 <img
+                  key={i}
                   src={`markdown/images/${i}.JPG`}
                   role="presentation"
                   className="uk-margin-remove"

@@ -22,7 +22,7 @@ class First extends Component {
   render() {
     return (
       <div>
-        <div className="uk-card-body">
+        <div className="uk-card-body" style={{ paddingBottom: '0px' }}>
           <form className="uk-form-stacked">
             <div className="uk-margin">
               <label className="uk-form-label" htmlFor="first">
@@ -54,7 +54,7 @@ class First extends Component {
             </div>
           </form>
 
-          <div className="uk-card-footer">
+          <div className="uk-card-footer" style={{ paddingRight: '0px' }}>
             <button
               className="uk-margin-remove uk-button uk-button-primary uk-align-right"
               onClick={this.next.bind(this)}

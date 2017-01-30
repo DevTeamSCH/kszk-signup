@@ -11,7 +11,7 @@ class App extends Component {
         {/* <div data-uk-sticky className="uk-navbar-container tm-navbar-container" id="navbar">
             hali <a className="uk-button uk-button-primary" href="#projektjeink" data-uk-scroll>Projektjeink</a>
         </div> */}
-{/* 
+{/*
         <div data-uk-sticky="media: 960" className="uk-navbar-container tm-navbar-container uk-active" id="navbar">
           <div className="uk-container uk-container-expand">
             <nav className="uk-navbar">
