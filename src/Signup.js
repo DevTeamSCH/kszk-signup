@@ -52,6 +52,7 @@ class Signup extends Component {
           <Fourth
             upload={this.uploadData.bind(this)}
             prev={this.prev.bind(this)}
+            addToData={this.addData.bind(this)}
             data={this.state}
           />
         );
@@ -84,6 +85,11 @@ class Signup extends Component {
         this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
       });*/
     console.log(name, mail, interest, date, text);
+    // .then(user => loginUserSuccess(dispatch, user))
+    // .catch(() => {
+    //   loginUserFail(dispatch);
+    // });
+
     this.setState({ step: 0, name: '', mail: '', interest: [], date: false, text: '' });
   }
 
@@ -93,7 +99,7 @@ class Signup extends Component {
         <div className="uk-card-header">
           <div className="uk-flex-middle">
             <div className="uk-width-auto">
-              <progress className="uk-progress" value={(this.state.step + 1) * 20} max="80" />
+              <progress className="uk-progress" value={this.state.step} max="3" />
             </div>
           </div>
         </div>

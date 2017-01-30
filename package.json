@@ -11,9 +11,12 @@
     "brfs": "^1.4.3",
     "firebase": "^3.6.7",
     "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-slick": "^0.14.5",
     "remarkable": "^1.7.1",
+    "slick-carousel": "^1.6.0",
     "uikit": "^3.0.0-beta.6"
   },
   "scripts": {
