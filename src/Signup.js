@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import './App.css';
-import { First, Second, Third, Fourth } from './steps';
+import { First, Second, Third, Fourth, Success, Error } from './steps';
 
 //this.props.addToData({ interest: ['egy', 'ketto'] });
 
 class Signup extends Component {
-  state = { step: 0, name: '', mail: '', date: true, text: '' };
+  state = { step: 0, name: '', mail: '', date: true, text: '', interest: [] };
   componentWillMount() {
       const config = {
         apiKey: 'AIzaSyBcO61362fgzXHuK2Fji5-Vs7H-n-6yyAI',
@@ -56,8 +56,15 @@ class Signup extends Component {
             data={this.state}
           />
         );
+      case 4:
+        return (
+          <Success
+            data={this.state}
+            addToData={this.addData.bind(this)}
+          />
+        );
       default:
-        return;
+        return (<Error addToData={this.addData.bind(this)} />);
     }
   }
 
@@ -76,21 +83,17 @@ class Signup extends Component {
     this.setState(state);
   }
 
-
   uploadData() {
     const { name, mail, interest, date, text } = this.state;
-    /*firebase.database().ref('/rookies')
+    firebase.database().ref('/rookies')
       .push({ name, mail, interest, date, text })
       .then(() => {
-        this.setState({ step: 1, name: '', mail: '', interest: [], date: false, text: '' });
-      });*/
-    console.log(name, mail, interest, date, text);
-    // .then(user => loginUserSuccess(dispatch, user))
-    // .catch(() => {
-    //   loginUserFail(dispatch);
-    // });
-
-    this.setState({ step: 0, name: '', mail: '', interest: [], date: false, text: '' });
+        this.setState({ step: 4 });
+      })
+      .catch(() => {
+        this.setState({ step: 5 });
+      }
+    );
   }
 
   render() {

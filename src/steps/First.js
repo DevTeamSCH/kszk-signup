@@ -48,7 +48,7 @@ class First extends Component {
                   value={this.state.mail}
                   className="uk-input"
                   type="text"
-                  placeholder="mail@kszk.bme.hu"
+                  placeholder="mail@kszk.info"
                 />
               </div>
             </div>

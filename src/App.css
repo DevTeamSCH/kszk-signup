@@ -2,6 +2,8 @@
   z-index: 10000;
 }
 
-.slick-slicer {
-  height: 250px;
+#footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
 }
