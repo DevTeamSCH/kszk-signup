@@ -120,7 +120,14 @@ class App extends Component {
                 105-ben mindig találsz valakit.
               </p>
               <p>
-                Látogass el <a href="" rel="noopener noreferrer" target="_blank">újoncdélutánunkra</a>,
+                Látogass el&nbsp;
+                <a
+                  href=""
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  újoncdélutánunkra
+                </a>,
                 ahol bővebben mesélünk tevékenységeinkről,
                 képzésünkről és egy kis meglepetéssel is kedveskedünk majd!
               </p>
