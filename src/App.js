@@ -119,6 +119,14 @@ class App extends Component {
                 Ha bármilyen kérdésed van, keress minket bátran – a
                 105-ben mindig találsz valakit.
               </p>
+              <p>
+                Látogass el <a href="" rel="noopener noreferrer" target="_blank">újoncdélutánunkra</a>,
+                ahol bővebben mesélünk tevékenységeinkről,
+                képzésünkről és egy kis meglepetéssel is kedveskedünk majd!
+              </p>
+              <p>
+                Jelentkezési határidő: <time dateTime="2017-02-17 23:59">02.17. 23:59</time>
+              </p>
               <Signup />
             </div>
           </div>
