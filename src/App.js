@@ -87,7 +87,7 @@ class App extends Component {
               <h3>Projektjeink</h3>
               <div>
                 <Markdown path={'/markdown/projektjeink.md'} />
-                  <Slideshow start={1} stop={7} />
+                  <Slideshow start={1} stop={8} />
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ class App extends Component {
               <h3>Közösség</h3>
               <div>
                 <Markdown path={'/markdown/kozosseg.md'} />
-                <Slideshow start={9} stop={12} />
+                <Slideshow start={9} stop={16} />
               </div>
             </div>
           </div>
@@ -107,14 +107,14 @@ class App extends Component {
               <h3>Képzésünk</h3>
               <div>
                 <Markdown path={'/markdown/kepzesunk.md'} />
-                <Slideshow start={13} stop={14} />
+                <Slideshow start={17} stop={23} />
               </div>
             </div>
           </div>
 
           <div id="jelentkezes" className="uk-section uk-section-default">
             <div className="uk-container">
-              <h3>Jelentkezés&nbsp; 
+              <h3>Jelentkezés a képzésre&nbsp;
                 <a
                   href="https://www.facebook.com/events/1392210267518627/"
                   rel="noopener noreferrer"
@@ -123,25 +123,7 @@ class App extends Component {
                   data-uk-icon="icon: facebook"
                 />
               </h3>
-              <p>
-                Ha bármilyen kérdésed van, keress minket bátran – a
-                105-ben mindig találsz valakit.
-              </p>
-              <p>
-                Látogass el&nbsp;
-                <a
-                  href="https://www.facebook.com/events/1392210267518627/"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  újoncdélutánunkra
-                </a>,
-                ahol bővebben mesélünk tevékenységeinkről,
-                képzésünkről és egy kis meglepetéssel is kedveskedünk majd!
-              </p>
-              <p>
-                Jelentkezési határidő: <time dateTime="2017-02-17 23:59">2017. 02.17. 23:59</time>
-              </p>
+              <Markdown path={'/markdown/jelentkezes.md'} />
               <Signup />
             </div>
           </div>
