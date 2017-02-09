@@ -114,7 +114,15 @@ class App extends Component {
 
           <div id="jelentkezes" className="uk-section uk-section-default">
             <div className="uk-container">
-              <h3>Jelentkezés</h3>
+              <h3>Jelentkezés&nbsp; 
+                <a
+                  href="https://www.facebook.com/events/1392210267518627/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="uk-icon-button"
+                  data-uk-icon="icon: facebook"
+                />
+              </h3>
               <p>
                 Ha bármilyen kérdésed van, keress minket bátran – a
                 105-ben mindig találsz valakit.
@@ -122,7 +130,7 @@ class App extends Component {
               <p>
                 Látogass el&nbsp;
                 <a
-                  href=""
+                  href="https://www.facebook.com/events/1392210267518627/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
@@ -132,7 +140,7 @@ class App extends Component {
                 képzésünkről és egy kis meglepetéssel is kedveskedünk majd!
               </p>
               <p>
-                Jelentkezési határidő: <time dateTime="2017-02-17 23:59">02.17. 23:59</time>
+                Jelentkezési határidő: <time dateTime="2017-02-17 23:59">2017. 02.17. 23:59</time>
               </p>
               <Signup />
             </div>
