@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Markdown from './Markdown';
-import Signup from './Signup';
+// import Signup from './Signup';
 import Slideshow from './Slideshow';
 import './App.css';
 
@@ -124,7 +124,11 @@ class App extends Component {
                 />
               </h3>
               <Markdown path={'/markdown/jelentkezes.md'} />
-              <Signup />
+              <p id="overtime">Sajnáljuk, de a jelentkezés lezárult.
+                <br />
+                <span data-uk-icon="icon: lock; ratio: 3" />
+              </p>
+              {/* <Signup /> */}
             </div>
           </div>
 
