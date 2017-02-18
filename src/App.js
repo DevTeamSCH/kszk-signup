@@ -112,7 +112,7 @@ class App extends Component {
             </div>
           </div>
 
-          <div id="jelentkezes" className="uk-section uk-section-default">
+          {/* <div id="jelentkezes" className="uk-section uk-section-default">
             <div className="uk-container">
               <h3>Jelentkezés a képzésre&nbsp;
                 <a
@@ -128,9 +128,9 @@ class App extends Component {
                 <br />
                 <span data-uk-icon="icon: lock; ratio: 3" />
               </p>
-              {/* <Signup /> */}
+              <Signup />
             </div>
-          </div>
+          </div> */}
 
           <div className="uk-section uk-section-secondary uk-light uk-padding-remove">
             <div className="uk-container">
